@@ -26,6 +26,12 @@ Policies and documents constantly evolve. Without monitoring, subtle changes (e.
 
 ---
 
+## 📺 Demo Video
+
+🎥 [Watch the Demo on YouTube](https://youtu.be/z2iMFg6dneo?si=NRC3m1EgAvGBcczn)
+
+---
+
 ## 📚 Workflow
 1. **Load documents** into BigQuery from Cloud Storage.  
 2. **Extract snippets/clauses** with `AI.GENERATE`.  
