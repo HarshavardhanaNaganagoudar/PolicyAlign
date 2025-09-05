@@ -6,12 +6,18 @@ The pipeline ensures consistent knowledge management by maintaining a **canonica
 
 ---
 
-## ⚡ Features
-- Clause extraction with `AI.GENERATE`  
-- Semantic similarity using embeddings & vector search  
-- AI verdicts on policy differences  
-- Human-in-the-loop approval workflow  
-- Canonical Knowledge Base (KB) builder  
+## 🚀 Why This Matters
+Policies and documents constantly evolve. Without monitoring, subtle changes (e.g., refund timelines, compliance rules) create **knowledge drift** — leading to contradictions, regulatory risks, and poor customer experiences.  
+
+---
+
+## 📂 Project Overview
+- Ingest unstructured docs (PDF/TXT/DOCX) from GCS as Object Tables  
+- Generate clause-level snippets with `AI.GENERATE`  
+- Create embeddings with `ML.GENERATE_EMBEDDING`  
+- Detect semantic drift with pairwise `ML.DISTANCE` + `VECTOR_SEARCH`  
+- Classify changes & unify clauses using `AI.GENERATE` (Gemini)  
+- Approve high-confidence cases → build a canonical knowledge base  
 
 ---
 
@@ -29,6 +35,30 @@ The pipeline ensures consistent knowledge management by maintaining a **canonica
 6. **Review changes** and approve high-confidence updates.  
 7. **Build canonical KB** for unified policy references.  
 8. **Retrieve/query** with vector search for semantic lookups.  
+
+---
+
+## 📊 Results / Outcomes
+- Automated extraction & unification of refund policies  
+- Identified **behavioral changes with >90% confidence**  
+- Reduced manual review effort by surfacing only drift-heavy clauses  
+- Built a canonical, drift-free table for downstream apps  
+
+---
+
+## 🛠️ Tech Stack
+- **BigQuery AI** (`AI.GENERATE`, `ML.GENERATE_EMBEDDING`, `VECTOR_SEARCH`)  
+- **Gemini 2.5 Flash** (semantic reasoning & clause unification)  
+- **Google Cloud Storage** (document source)  
+- **BigQuery Object Tables** (multimodal doc ingestion)  
+
+---
+
+## 🔮 Future Improvements
+- Multi-lingual policy drift detection  
+- Image/PDF multimodal embeddings (e.g., scanned docs)  
+- Real-time drift alerts & dashboards  
+- Integration with downstream RAG / chatbots for enterprise QA  
 
 ---
 
